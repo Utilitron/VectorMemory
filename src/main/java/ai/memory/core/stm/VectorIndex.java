@@ -1,4 +1,4 @@
-package ai.memory.core.index;
+package ai.memory.core.stm;
 
 import java.util.List;
 

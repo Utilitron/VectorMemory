@@ -3,7 +3,6 @@ package ai.memory.core.ltm;
 import ai.memory.core.embed.Embedder;
 import ai.memory.core.model.KnowledgeItem;
 import ai.memory.core.model.SearchResult;
-import ai.memory.core.store.VectorStore;
 import ai.memory.core.util.Metadata;
 
 import java.util.*;

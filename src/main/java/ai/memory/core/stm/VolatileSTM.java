@@ -1,6 +1,5 @@
 package ai.memory.core.stm;
 
-import ai.memory.core.index.VectorIndex;
 import ai.memory.core.model.MemoryTrace;
 import ai.memory.core.embed.Embedder;
 
@@ -11,7 +10,7 @@ import java.util.Deque;
 /**
  * High‑performance STM using a pluggable VectorIndex (e.g., HnswIndex).
  */
-public class JVectorSTM implements ShortTermMemory {
+public class VolatileSTM implements ShortTermMemory {
 
     private final Embedder embedder;
     private final VectorIndex vectorIndex;
@@ -26,7 +25,7 @@ public class JVectorSTM implements ShortTermMemory {
      * @param vectorIndex  the vector index implementation (e.g., HnswIndex)
      * @param maxSize      maximum number of traces before oldest are evicted
      */
-    public JVectorSTM(Embedder embedder, VectorIndex vectorIndex, int maxSize) {
+    public VolatileSTM(Embedder embedder, VectorIndex vectorIndex, int maxSize) {
         this.embedder = embedder;
         this.vectorIndex = vectorIndex;
         this.maxSize = maxSize;

@@ -1,4 +1,4 @@
-package ai.memory.core.store;
+package ai.memory.core.ltm;
 
 import ai.memory.core.model.SearchResult;
 
