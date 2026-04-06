@@ -21,13 +21,13 @@ public class VolatileSTM implements ShortTermMemory {
     /**
      * Creates a new JVector STM.
      *
-     * @param embedder     converts text to embedding vectors
      * @param vectorIndex  the vector index implementation (e.g., HnswIndex)
+     * @param embedder     converts text to embedding vectors
      * @param maxSize      maximum number of traces before oldest are evicted
      */
-    public VolatileSTM(Embedder embedder, VectorIndex vectorIndex, int maxSize) {
-        this.embedder = embedder;
+    public VolatileSTM(VectorIndex vectorIndex, Embedder embedder, int maxSize) {
         this.vectorIndex = vectorIndex;
+        this.embedder = embedder;
         this.maxSize = maxSize;
     }
 
