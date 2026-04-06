@@ -53,20 +53,6 @@ public class MemoryService {
      * @param k     maximum total results
      * @return list of memory units (both traces and knowledge items)
      */
-    /*
-    public List<MemoryUnit> recall(String query, int k) {
-        List<MemoryTrace> stmResults = stm.search(query, k);
-        for (MemoryTrace t : stmResults) {
-            scorer.recordRetrieval(t.id());
-        }
-
-        List<KnowledgeItem> ltmResults = ltm.search(query, k);
-
-        List<MemoryUnit> merged = new ArrayList<>();
-        merged.addAll(stmResults);
-        merged.addAll(ltmResults);
-        return merged.stream().limit(k).toList();
-    }*/
     public List<MemoryUnit> recall(String query, int k) {
         int stmK = k / 2;
         int ltmK = k - stmK;
